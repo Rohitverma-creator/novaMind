@@ -38,7 +38,7 @@ app.use("/api/agent", protect, proxyWithHeader(process.env.AGENT_SERVICE));
 app.use("/api/me", protect, getCurrentUser);
 
 app.get("/", (req, res) => {
-  res.send("Hello from gateway service");
+  res.send("Hello from gateway service-1");
 });
 
 app.listen(port, () => {
