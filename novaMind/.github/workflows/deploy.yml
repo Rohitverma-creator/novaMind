@@ -27,10 +27,6 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
 
-      #####################
-      # Gateway
-      #####################
-
       - name: Build Gateway
         run: |
           docker build \
@@ -47,10 +43,6 @@ jobs:
         run: |
           docker push \
           $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/gateway:latest
-
-      #####################
-      # Auth Service
-      #####################
 
       - name: Build Auth
         run: |
@@ -69,10 +61,6 @@ jobs:
           docker push \
           $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/auth-service:latest
 
-      #####################
-      # Chat Service
-      #####################
-
       - name: Build Chat
         run: |
           docker build \
@@ -90,10 +78,6 @@ jobs:
           docker push \
           $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/chat-service:latest
 
-      #####################
-      # Agent Service
-      #####################
-
       - name: Build Agent
         run: |
           docker build \
@@ -110,10 +94,6 @@ jobs:
         run: |
           docker push \
           $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/agent-service:latest
-
-      #####################
-      # Billing Service
-      #####################
 
       - name: Build Billing
         run: |
