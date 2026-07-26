@@ -1,0 +1,21 @@
+FROM node
+
+WORKDIR /app
+
+# Root dependencies
+COPY package*.json ./
+RUN npm install
+
+# Chat service dependencies
+COPY services/chat/package*.json ./services/chat/
+RUN cd services/chat && npm install
+
+# Copy source code
+COPY services/chat ./services/chat
+COPY shared ./shared
+
+WORKDIR /app/services/chat
+
+EXPOSE 8002
+
+CMD ["npm", "start"]

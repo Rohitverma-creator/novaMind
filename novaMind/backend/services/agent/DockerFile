@@ -1,0 +1,22 @@
+FROM node
+
+WORKDIR /app
+
+# Root dependencies
+COPY package*.json ./
+RUN npm install
+
+# Agent dependencies
+COPY services/agent/package*.json ./services/agent/
+RUN cd services/agent && npm install
+
+# Copy source code
+COPY services/agent ./services/agent
+COPY services/chat ./services/chat
+COPY shared ./shared
+
+WORKDIR /app/services/agent
+
+EXPOSE 8003
+
+CMD ["npm", "start"]
