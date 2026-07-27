@@ -1,5 +1,5 @@
 import { checkAgentLimit } from "../config/agentLimit.js";
-import { getModel } from "../../chat/config/llmModel.js";
+import { getModel } from "../config/llmModel.js";
 import { deductCredits } from "../utils/deductCredits.js";
 
 const KNOWN_INTENTS = [

@@ -1,5 +1,5 @@
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import { getModel } from "../../chat/config/llmModel.js";
+import { getModel } from "../config/llmModel.js";
 import fs from "fs/promises";
 import { deductCredits } from "../utils/deductCredits.js";
 import { checkAgentLimit } from "../config/agentLimit.js";

@@ -3,7 +3,7 @@ import {
   HumanMessage,
   SystemMessage,
 } from "@langchain/core/messages";
-import { getModel } from "../../chat/config/llmModel.js";
+import { getModel } from "../config/llmModel.js";
 import { getMemory } from "../config/memory.js";
 import { deductCredits } from "../utils/deductCredits.js";
 import { checkAgentLimit } from "../config/agentLimit.js";

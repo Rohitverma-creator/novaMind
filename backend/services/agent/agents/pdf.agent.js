@@ -1,4 +1,4 @@
-import { getModel } from "../../chat/config/llmModel.js";
+import { getModel } from "../config/llmModel.js";
 import { generatePDF } from "../utils/generatePdf.js";
 import { uploadToS3 } from "../utils/uploadToS3.js";
 import { getFromS3 } from "../utils/getFromS3.js";

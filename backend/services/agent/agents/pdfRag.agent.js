@@ -2,7 +2,7 @@ import fs, { stat } from "fs";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { PDFParse } from "pdf-parse";
 import { vectorStore } from "../config/vectorDb.js";
-import { getModel } from "../../chat/config/llmModel.js";
+import { getModel } from "../config/llmModel.js";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 import { deductCredits } from "../utils/deductCredits.js";
 import { checkAgentLimit } from "../config/agentLimit.js";
